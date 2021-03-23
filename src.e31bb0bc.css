@@ -32,4 +32,16 @@ a {
   display: block;
 }
 
+.section-footer {
+  margin-top: 50px;
+  background-color: #bebebe;
+}
+
+.btn {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
