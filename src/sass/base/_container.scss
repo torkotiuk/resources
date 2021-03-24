@@ -1,0 +1,42 @@
+.container {
+  padding: 0 15px;
+  border: 2px solid goldenrod;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  // .hero & {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   height: 600px;
+  // }
+
+  // .footer & {
+  //   @media screen and (min-width: 1200px) {
+  //     display: flex;
+  //     align-items: baseline;
+  //   }
+  // }
+
+  // .header & {
+  //   @media screen and (min-width: 768px) {
+  //     display: flex;
+  //     align-items: center;
+  //   }
+
+  //   @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //     justify-content: space-between;
+  //   }
+  // }
+}
