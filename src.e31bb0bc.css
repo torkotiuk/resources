@@ -44,4 +44,68 @@ a {
   width: 150px;
 }
 
+.lesson_links {
+  display: inline;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.container {
+  padding: 0 15px;
+  border: 2px solid goldenrod;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+:root {
+  --main-font: "Roboto", sans-serif;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
