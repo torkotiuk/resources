@@ -49,6 +49,14 @@ a {
   display: inline;
 }
 
+.code-learn {
+  display: block;
+  width: 200px;
+  font-size: 20px;
+  background-color: #b6b3b3;
+  color: red;
+}
+
 *,
 *::before,
 *::after {
