@@ -202,6 +202,10 @@ if (true) {
 var array = [];
 array['10'] = 5;
 console.log(array.length); //11
+//
+// const x = 1;
+// const x = 'hello';
+// console.log(x);
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -236,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49311" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53160" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
