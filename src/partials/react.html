@@ -14,12 +14,22 @@
         <strong>npm install --save-dev prop-types</strong
         ><a href="https://www.npmjs.com/package/prop-types">Docs on npmjs.com</a>
       </li>
-      <li>  a) Reactjs code snippets --- install for VSCode
-            b) look for settings (in VSCode) - emmet.syntaxProfiles
-            c) add next settings: 
+      <li>  
+        <p>a- 1-Reactjs code snippets</p>
+        <a href="https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets">Emmet commands for React in VSCode </a>
+<ul class="react-jss">
+  <li><p><strong>rsc</strong>	- stateless component skeleton</p></li>
+  <li><p><strong>rcc</strong> - class component skeleton</p></li>
+</ul>
+        <p> 2-Simple React Snippets
+            --- install for VSCode
+            b- look for settings (in VSCode) - emmet.syntaxProfiles
+            c- add next settings: 
             "emmet.includeLanguages": {
             "javascript": "javascriptreact"
-            },</li>
+            }
+        </p>
+      </li>
       <li>
       Server Side Rendering - SEO for react apps
       </li>
@@ -37,11 +47,45 @@
     </ul>
 
     <h4>Styles</h4>
-    <ul>
+    <ul class="react-styles">
       <li><a href="https://github.com/sindresorhus/modern-normalize"><strong>modern-normalize</strong>on github, reset styles with npm package, NOT with link in HTML</a></li>
       <li><strong>npm install modern-normalize</strong></li>
       <li><strong>import 'modern-normalize/modern-normalize.css'</strong> to index.js</li>
       <li><strong>npm install node-sass --save</strong> for using usual SASS</li>
+      <li><a href="https://cssinjs.org/">JSS styles - one of the most popular way to style</a>
+        <ol class="react-jss">
+        <li><a href="https://cssinjs.org/react-jss">Go to packages/React-JSS</a></li>
+        <li>npm install react-jss</li>
+        <li>import {createUseStyles} from 'react-jss'</li>
+        <li>create function <strong><p>const useStyles = createUseStyles({
+          //write your styles
+        });</p></strong></li>
+        <li><strong>f.e css class "list">></strong> <p>const useStyles = createUseStyles({
+          list: {
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
+          },
+        });</p></li>
+        <li><strong>Create some var inside Component for using hash(ending in styles) styles as a module.css--styles</strong>
+        <p>const cssClasses = useStyles();</p>
+        </li>
+        <li><p>className={cssClasses.list}></p></li>
+        </ol>
+      </li>
+      <li>
+        <a href="https://material-ui.com/">Material-ui</a>
+        <ol class="react-jss">
+          <li></li>
+        </ol>
+      </li>
+    </ul>
+    
+
+    <h4>Additional practices</h4>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=ezAN9ztOYy0">Занятие с ментором блендед 2 (17.04.2021)</a></li>
+      <li><a href="https://github.com/z9877969/practic-react">Github REP - Section, Container, List components</a></li>
     </ul>
   </div>
 </section>
