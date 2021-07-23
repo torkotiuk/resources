@@ -133,6 +133,14 @@
     <ul>
       <li><strong>bcrypt</strong> lib working with stable nodeJS version</li>
       <li><strong>bcryptjs</strong> lib working with current (unstable) nodeJS version</li>
+      <h5 class="title">Token consist:</h5>
+      <ol class="react-jss">
+        <li>headers - algorithm and way of token creation (by default using const headers = {"alg": "HS256", "typ": "JWT"})</li>
+        <li>payload - part that is encrypted ("id" f.e.)</li>
+        <li>SECRET_KEY - usual string with any text</li>
+        <p>f.e const token = 'qwertyuiop.asdfghjkl.zxcvbnm', where "qwertyuiop" - headers encrypted, "asdfghjkl" - payload encrypted, "zxcvbnm" - SECRET_KEY encrypted</p>
+        <p>method from jsonwebtoken decrypts token and pull decrypted payload </p>
+      </ol>
     </ul>
 
     <h3 class="title">Архитектура приложений MVC и REST</h3>
