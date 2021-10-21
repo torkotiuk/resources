@@ -1,0 +1,56 @@
+<section class="section build-tools" id="build-tools">
+  <div class="container">
+    <h2>Build tools</h2>
+    <p><a href="#top" style="color: red; font-size: 20px">Top</a></p>
+
+    <ul class="react-jss">
+      <li><a href="https://vitejs.dev/">vitejs</a></li>
+      <li>
+        <p>parcel</p>
+        <div class="build-tools-parcel">
+          <h4>How to use a parcel template</h4>
+          <ol class="react-jss">
+            <li>
+              <strong>Create own repository</strong> on github and clone to your
+              pc
+            </li>
+            <li>
+              <strong>Copy all files</strong> from original
+              parcel-project-template
+              <a href="https://github.com/goitacademy/parcel-project-template"
+                >https://github.com/parcel-project-template</a
+              >
+            </li>
+            <li>
+              <strong>Add next scripts</strong> to package.json:
+              <ul class="react-jss">
+                <li>
+                  <!--  -->
+                  "predeploy": "npm run build -- --public-url /resources/",
+                  <!--  -->
+                </li>
+                <li>"deploy": "gh-pages -d dist"</li>
+              </ul>
+            </li>
+            <li>
+              <strong>change</strong> in package.json
+              <strong>next lines</strong>
+              <ul class="react-jss">
+                <li>
+                  change username and name of project to yours --- "homepage":
+                  "https://YOUR-USERNAMA.github.io/NAME-REPOSITORY"
+                </li>
+                <li>
+                  also change name of the project in "predeploy" ---
+                  "predeploy": "npm run build -- --public-url /NAME-REPOSITORY/"
+                </li>
+              </ul>
+            </li>
+            <li><strong>Install gh-pages:</strong> npm i gh-pages -D</li>
+            <li><strong>Install all dependencies:</strong> npm i</li>
+          </ol>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
