@@ -1,6 +1,6 @@
 let b = 20;
 if (true) {
-  console.log(b); //undefined
+  // console.log(b);
   let b = 10;
 }
 
@@ -8,7 +8,7 @@ if (true) {
 
 let array = [];
 array['10'] = 5;
-console.log(array.length); //11
+// console.log(array.length);
 
 //
 // const x = 1;

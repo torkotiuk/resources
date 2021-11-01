@@ -3,6 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,4 +21,43 @@ img {
 
 .link {
   text-decoration: none;
+}
+
+//
+body,
+html {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.dark {
+  background-color: rgb(214, 214, 214);
+  // color: #fff;
+}
+
+.maxwidth {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.75rem;
 }
