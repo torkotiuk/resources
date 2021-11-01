@@ -62,6 +62,7 @@ a {
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -79,6 +80,43 @@ img {
 
 .link {
   text-decoration: none;
+}
+
+body,
+html {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.dark {
+  background-color: #d6d6d6;
+}
+
+.maxwidth {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.75rem;
 }
 
 .section {
@@ -163,6 +201,109 @@ img {
 
 .menu-section-link:hover {
   color: #fff;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: reverse;
+  height: 100px;
+  box-shadow: 2px 0 5px #333;
+}
+
+.bar {
+  display: none;
+}
+
+.nav {
+  display: block;
+  position: relative;
+}
+
+.nav__burger-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin: 0 10px;
+}
+
+.nav__burger,
+.nav__burger::before,
+.nav__burger::after {
+  opacity: 1;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav__burger::before,
+.nav__burger::after {
+  content: "";
+  position: absolute;
+}
+
+.nav__burger::before {
+  transform: translateY(-8px);
+}
+
+.nav__burger::after {
+  transform: translateY(8px);
+}
+
+.nav__burger-btn.open .nav__burger {
+  background: transparent;
+}
+
+.nav__burger-btn.open .nav__burger::before {
+  background: red;
+  transform: rotate(45deg);
+}
+
+.nav__burger-btn.open .nav__burger::after {
+  background: red;
+  transform: rotate(-45deg);
+}
+
+.nav__list {
+  position: absolute;
+  top: 50;
+  left: 0;
+  display: none;
+  width: 100vw;
+  padding: 10px;
+  list-style-type: none;
+  animation: showMenu 0.5s ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes showMenu {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.nav__item {
+  display: block;
+  font-size: 1.75rem;
+  padding: 20px;
+  background: #b8a7a7;
+}
+
+.nav__list.open {
+  display: block;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */

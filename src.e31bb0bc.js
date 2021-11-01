@@ -193,15 +193,13 @@ module.hot.accept(reloadCSS);
 var b = 20;
 
 if (true) {
-  console.log(_b); //undefined
-
+  // console.log(b);
   var _b = 10;
 } //
 
 
 var array = [];
-array['10'] = 5;
-console.log(array.length); //11
+array['10'] = 5; // console.log(array.length);
 //
 // const x = 1;
 // const x = 'hello';
@@ -212,6 +210,24 @@ console.log(array.length); //11
 require("./sass/main.scss");
 
 require("./js/someTask");
+
+document.addEventListener('DOMContentLoaded', function () {
+  initApp();
+});
+
+var initApp = function initApp() {
+  var menuBtn = document.querySelector('.nav__burger-btn');
+  var list = document.querySelector('.nav__list');
+  menuBtn.addEventListener('click', toggleButtonAndMenu);
+  list.addEventListener('click', toggleButtonAndMenu);
+};
+
+var toggleButtonAndMenu = function toggleButtonAndMenu() {
+  var menuBtn = document.querySelector('.nav__burger-btn');
+  var list = document.querySelector('.nav__list');
+  menuBtn.classList.toggle('open');
+  list.classList.toggle('open');
+};
 },{"./sass/main.scss":"sass/main.scss","./js/someTask":"js/someTask.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -240,7 +256,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58607" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54695" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
