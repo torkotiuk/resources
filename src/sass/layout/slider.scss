@@ -1,0 +1,18 @@
+.slider {
+  background-color: rgb(192, 255, 187);
+  // float: right;
+}
+
+.slider li {
+  display: inline-block;
+}
+
+.slider li a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.menu-area {
+  overflow: hidden;
+}

@@ -17,42 +17,66 @@
         scroll-behavior: smooth;
       }
     </style>
+
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <div id="page-wrap">
-      <include src="./partials/header-before.html"></include>
-      <include src="./partials/header.html"></include>
-      <include src="./partials/my-projects.html"></include>
-      <include src="./partials/menu_sections.html"></include>
-      <include src="./partials/typeScript.html"></include>
-      <include src="./partials/nodeJs.html"></include>
-      <include src="./partials/react.html"></include>
-      <include src="./partials/html.html"></include>
-      <include src="./partials/code-guides.html"></include>
-      <include src="./partials/code-trainers.html"></include>
-      <include src="./partials/css.html"></include>
-      <include src="./partials/img-about.html"></include>
-      <include src="./partials/verstka-services.html"></include>
-      <include src="./partials/lessons.html"></include>
-      <include src="./partials/landing.html"></include>
-      <include src="./partials/js-1.html"></include>
-      <include src="./partials/git.html"></include>
-      <include src="./partials/dev.html"></include>
-      <include src="./partials/soft-skills.html"></include>
-      <include src="./partials/interviews.html"></include>
-      <include src="./partials/res-organize.html"></include>
-      <include src="./partials/it.html"></include>
-      <include src="./partials/practice.html"></include>
-      <include src="./partials/sw-share-code.html"></include>
-      <include src="./partials/build-tools.html"></include>
-      <include src="./partials/hosting.html"></include>
-      <include src="./partials/m-other-projects.html"></include>
-      <include src="./partials/footer.html"></include>
-      <!-- <include src="./partials/example.html"></include> -->
+      <!-- <include src="./partials/header-before.html"></include> -->
+      <header class="header">
+        <!-- <include src="./123/slider-test.html"></include>
+        <include src="./123/slider-guide.html"></include> -->
+        <include src="./partials/header.html"></include>
+        <include src="./partials/my-projects.html"></include>
+        <include src="./partials/menu_sections.html"></include>
+      </header>
+      <main>
+        <include src="./partials/typeScript.html"></include>
+        <include src="./partials/nodeJs.html"></include>
+        <include src="./partials/react.html"></include>
+        <include src="./partials/html.html"></include>
+        <include src="./partials/code-guides.html"></include>
+        <include src="./partials/code-trainers.html"></include>
+        <include src="./partials/css.html"></include>
+        <include src="./partials/img-about.html"></include>
+        <include src="./partials/verstka-services.html"></include>
+        <include src="./partials/lessons.html"></include>
+        <include src="./partials/landing.html"></include>
+        <include src="./partials/js-1.html"></include>
+        <include src="./partials/git.html"></include>
+        <include src="./partials/dev.html"></include>
+        <include src="./partials/soft-skills.html"></include>
+        <include src="./partials/interviews.html"></include>
+        <include src="./partials/res-organize.html"></include>
+        <include src="./partials/it.html"></include>
+        <include src="./partials/practice.html"></include>
+        <include src="./partials/sw-share-code.html"></include>
+        <include src="./partials/build-tools.html"></include>
+        <include src="./partials/hosting.html"></include>
+      </main>
+      <footer>
+        <include src="./partials/m-other-projects.html"></include>
+        <include src="./partials/footer.html"></include>
+      </footer>
     </div>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+
+    <!-- slider -->
+    <script type="text/javascript" src="123/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+
+    <!-- <script type="text/javascript">
+      $(document).ready(function () {
+        $('.thing').slick({
+          dots: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 1000,
+        });
+      });
+    </script> -->
   </body>
 </html>
