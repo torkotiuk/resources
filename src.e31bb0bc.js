@@ -189,15 +189,33 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"123/slider.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slider.js":[function(require,module,exports) {
+// $('.multiple-items').slick({
+//   infinite: true,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   autoplay: true,
+//   autoplaySpeed: 4000,
+// });
+// single item
+$('.multiple-items').slick({
+  slidesToShow: 1,
+  // slidesToScroll: 3,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  fade: true // cssEase: 'linear',
+  // dots: true,
 
+});
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
 
-require("./123/slider");
-},{"./sass/main.scss":"sass/main.scss","./123/slider":"123/slider.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./js/slider");
+},{"./sass/main.scss":"sass/main.scss","./js/slider":"js/slider.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -225,7 +243,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62061" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53712" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

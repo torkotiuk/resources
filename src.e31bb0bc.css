@@ -292,6 +292,7 @@ h1 {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  z-index: 999;
 }
 
 .main-nav__first-links:hover .nav-ext {
@@ -330,22 +331,19 @@ h1 {
   border-radius: 5px;
 }
 
-.slider {
-  background-color: #c0ffbb;
+.for-slick-slider {
+  width: 600px;
+  background: #f6ffcc;
+  display: flex;
 }
 
-.slider li {
-  display: inline-block;
+.for-slick-slider .slider-items {
+  width: 100%;
+  margin: 20px;
 }
 
-.slider li a {
-  display: inline-block;
-  padding: 10px 15px;
-  text-transform: uppercase;
-}
-
-.menu-area {
-  overflow: hidden;
+.for-slick-slider .slider-items img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
