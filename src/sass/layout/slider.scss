@@ -1,18 +1,15 @@
-.slider {
-  background-color: rgb(192, 255, 187);
-  // float: right;
+.for-slick-slider {
+  width: 600px;
+  background: rgb(246, 255, 204);
+  display: flex;
 }
 
-.slider li {
-  display: inline-block;
+.for-slick-slider .slider-items {
+  width: 100%;
+
+  margin: 20px;
 }
 
-.slider li a {
-  display: inline-block;
-  padding: 10px 15px;
-  text-transform: uppercase;
-}
-
-.menu-area {
-  overflow: hidden;
+.for-slick-slider .slider-items img {
+  width: 100%;
 }
