@@ -355,6 +355,23 @@ ul {
   border-radius: 5px;
 }
 
+.nav-ext__wallet-proj {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #c3bbff;
+  color: #2100a4;
+}
+
+.nav-ext__wallet-proj-title {
+  margin-bottom: 10px;
+}
+
+.nav-ext__wallet-proj-descr {
+  font-weight: normal;
+}
+
 .for-slick-slider {
   width: 600px;
   background: #f6ffcc;
