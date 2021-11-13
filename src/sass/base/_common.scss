@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
 }
 
 body {
@@ -60,4 +62,8 @@ a:hover {
 
 h1 {
   font-size: 1.75rem;
+}
+
+ul {
+  list-style: none;
 }

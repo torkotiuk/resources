@@ -83,3 +83,20 @@
   background-color: rgb(147, 147, 157);
   border-radius: 5px;
 }
+
+.nav-ext__wallet-proj {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #c3bbff;
+  color: rgb(33, 0, 164);
+}
+
+.nav-ext__wallet-proj-title {
+  margin-bottom: 10px;
+}
+
+.nav-ext__wallet-proj-descr {
+  font-weight: normal;
+}

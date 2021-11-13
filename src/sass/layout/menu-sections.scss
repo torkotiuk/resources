@@ -1,6 +1,24 @@
+.menu-sections__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .menu-section-li {
-  padding: 5px;
   background-color: rgb(235, 235, 235);
+}
+
+.menu-section-li {
+  margin: 10px 0;
+  border: 1px solid #bbbbbb;
+}
+
+.menu-section-li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.menu-section-link {
+  display: block;
+  padding: 10px 15px;
 }
 
 .menu-section-li:hover {
