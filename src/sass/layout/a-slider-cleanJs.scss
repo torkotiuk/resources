@@ -1,0 +1,90 @@
+.carousel {
+  position: relative;
+  outline: 3px solid black;
+  height: 700px;
+}
+
+.carousel__track-container {
+  position: relative;
+  outline: 3px solid orange;
+  // height: 700px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel__track {
+  position: relative;
+  height: 100%;
+  // display: flex;
+  transition: transform 250ms ease-in;
+}
+
+.carousel__image {
+  height: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel__button--left {
+  outline: 3px solid red;
+
+  left: -60px;
+}
+
+.carousel__button--right {
+  outline: 3px solid green;
+
+  right: -60px;
+}
+
+.carousel__button img {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+// carousel nav
+.carousel__nav {
+  background: pink;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carousel__nav-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.carousel__nav-indicator:not(:last-child) {
+  margin-right: 15px;
+}
+
+.carousel__nav-indicator.current-slide {
+  background: #2a2a2a;
+}
+
+.is-hidden {
+  display: none;
+}
