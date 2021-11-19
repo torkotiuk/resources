@@ -209,13 +209,103 @@ $('.multiple-items').slick({
   // dots: true,
 
 });
+},{}],"js/a-slider-cleanJs.js":[function(require,module,exports) {
+var track = document.querySelector('.carousel__track');
+var slides = Array.from(track.children);
+var nextButton = document.querySelector('.carousel__button--right');
+var prevButton = document.querySelector('.carousel__button--left');
+var dotsNav = document.querySelector('.carousel__nav');
+var dots = Array.from(dotsNav.children);
+var slideSize = slides[0].getBoundingClientRect();
+var slideWidth = slideSize.width; // arrange slides one to another
+
+var setSlidePosition = function setSlidePosition(slide, index) {
+  slide.style.left = slideWidth * index + 'px';
+};
+
+slides.forEach(setSlidePosition); // move to the next slide
+
+var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
+  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  currentSlide.classList.remove('current-slide');
+  targetSlide.classList.add('current-slide');
+};
+
+var updateDots = function updateDots(currentDot, targetDot) {
+  currentDot.classList.remove('current-slide');
+  targetDot.classList.add('current-slide');
+};
+
+var hideOrShowArrows = function hideOrShowArrows(slides, prevButton, nextButton, targetIndex) {
+  if (targetIndex === 0) {
+    prevButton.classList.add('is-hidden');
+    nextButton.classList.remove('is-hidden');
+  } else if (targetIndex === slides.length - 1) {
+    prevButton.classList.remove('is-hidden');
+    nextButton.classList.add('is-hidden');
+  } else {
+    prevButton.classList.remove('is-hidden');
+    nextButton.classList.remove('is-hidden');
+  }
+};
+
+nextButton.addEventListener('click', function (e) {
+  var currentSlide = track.querySelector('.current-slide');
+  var nextSlide = currentSlide.nextElementSibling; // --- refactor to "moveToSlide" fn
+  // const amountToMove = nextSlide.style.left;
+  // move to the next slide
+  // track.style.transform = 'translateX(-' + amountToMove + ')';
+  // currentSlide.classList.remove('current-slide');
+  // nextSlide.classList.add('current-slide');
+
+  moveToSlide(track, currentSlide, nextSlide); // move dots
+
+  var currentDot = dotsNav.querySelector('.current-slide');
+  var nextDot = currentDot.nextElementSibling;
+  updateDots(currentDot, nextDot); // showOrHide arrows
+
+  var nextIndex = slides.findIndex(function (slide) {
+    return slide === nextSlide;
+  });
+  hideOrShowArrows(slides, prevButton, nextButton, nextIndex);
+});
+prevButton.addEventListener('click', function (e) {
+  var currentSlide = track.querySelector('.current-slide');
+  var prevSlide = currentSlide.previousElementSibling;
+  moveToSlide(track, currentSlide, prevSlide); // move dots
+
+  var currentDot = dotsNav.querySelector('.current-slide');
+  var prevDot = currentDot.previousElementSibling;
+  updateDots(currentDot, prevDot); // showOrHide arrows
+
+  var prevIndex = slides.findIndex(function (slide) {
+    return slide === prevSlide;
+  });
+  hideOrShowArrows(slides, prevButton, nextButton, prevIndex);
+}); // carousel__nav
+
+dotsNav.addEventListener('click', function (e) {
+  var targetDot = e.target.closest('button');
+  if (!targetDot) return;
+  var currentSlide = track.querySelector('.current-slide');
+  var currentDot = dotsNav.querySelector('.current-slide');
+  var targetIndex = dots.findIndex(function (dot) {
+    return dot === targetDot;
+  });
+  var targetSlide = slides[targetIndex];
+  moveToSlide(track, currentSlide, targetSlide);
+  updateDots(currentDot, targetDot);
+  hideOrShowArrows(slides, prevButton, nextButton, targetIndex);
+});
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
 
 require("./js/slider");
-},{"./sass/main.scss":"sass/main.scss","./js/slider":"js/slider.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/a-slider-cleanJs");
+},{"./sass/main.scss":"sass/main.scss","./js/slider":"js/slider.js","./js/a-slider-cleanJs":"js/a-slider-cleanJs.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -243,7 +333,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58967" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58104" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
