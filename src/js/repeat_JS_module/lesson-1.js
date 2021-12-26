@@ -27,15 +27,19 @@
 
 // ** get RANDOM NUMBER from min to max
 // ** Ex. 1
-// const min = 30;
-// const max = 50;
-// let randomNumber = Math.random() * (max - min) + min;
-// console.log(
-//   `Random number from ${min} to ${max} and round it after ',': `,
-//   Math.round(randomNumber),
-//   `Full number is: `,
-//   randomNumber,
-// );
+const min = 30;
+const max = 50;
+let randomNumber = Math.random() * (max - min) + min;
+console.log(
+  `Random number from ${min} to ${max} and round it after ',': `,
+  Math.round(randomNumber),
+  `Full number is: `,
+  randomNumber,
+);
+//
+const testElement = document.querySelector('.test-section__item');
+testElement.innerHTML = Math.round(randomNumber);
+
 // ** Ex. 2
 // const colors = ['pink', 'purple', 'tomato', 'orange', 'green'];
 // const min = 0;
@@ -52,4 +56,16 @@
 // ** 6 falsy values in boolean transformation
 // 0, NaN, null, undefined, '', false
 
-console.log(Boolean({}));
+// ** task - find number in some range of min and max
+// alert('We are looking NUMBER < min and > max');
+// const min = prompt('Enter number min: ');
+// console.log(`Min: ${min}`);
+// const max = prompt('Enter number max: ');
+// console.log(`Max: ${max}`);
+// let x = Number(prompt(`Enter some number`));
+
+// if (x < min || x > max) {
+//   console.log('Ok, number is in range before min or after max', x);
+// } else {
+//   console.log('Wrong, number is between min and max');
+// }
