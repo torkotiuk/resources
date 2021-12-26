@@ -472,4 +472,9 @@ ul {
   display: none;
 }
 
+.landing__main-list {
+  background-color: #d4ffc7;
+  border: 1px solid #8ef82b;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
