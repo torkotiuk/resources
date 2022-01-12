@@ -477,4 +477,17 @@ ul {
   border: 1px solid #8ef82b;
 }
 
+.plan-spheres-title__container {
+  display: flex;
+  align-items: center;
+  outline: 2px solid #ace9ac;
+}
+
+.balance-wheel {
+  margin-left: 20px;
+  width: 100%;
+  height: 25px;
+  background-color: #c4c4c4;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
