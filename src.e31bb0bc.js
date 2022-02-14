@@ -353,11 +353,16 @@ testElement.innerHTML = Math.round(randomNumber); // ** Ex. 2
 // } else {
 //   console.log('Wrong, number is between min and max');
 // }
+},{}],"js/repeat_JS_module/interview-easy.js":[function(require,module,exports) {
+a = 123;
+b = 84; // console.log(([a, b] = [b, a]));
 },{}],"js/repeat_JS_module/index.js":[function(require,module,exports) {
 "use strict";
 
 require("./lesson-1");
-},{"./lesson-1":"js/repeat_JS_module/lesson-1.js"}],"index.js":[function(require,module,exports) {
+
+require("./interview-easy");
+},{"./lesson-1":"js/repeat_JS_module/lesson-1.js","./interview-easy":"js/repeat_JS_module/interview-easy.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -395,7 +400,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55300" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55059" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
