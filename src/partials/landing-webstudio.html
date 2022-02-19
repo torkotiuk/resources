@@ -289,7 +289,7 @@
             <li>
               <a
                 target="_blank"
-                href="https://www.youtube.com/watch?v=_StgByWohXQ&t2770s"
+                href="https://www.youtube.com/watch?v=_StgByWohXQ&t=4740s"
               >
                 - How to know (to measure with grid) in figma
                 <b>container size</b></a
@@ -327,6 +327,107 @@
           </ul>
         </li>
       </ol>
+    </div>
+
+    <!-- Lesson 6 -->
+    <div style="background-color: rgb(209, 255, 241)">
+      <h5 class="title" style="text-align: center; font-size: 18px">
+        Lesson 6 - Flexbox
+      </h5>
+
+      <ul class="react-jss">
+        <li>
+          - When we set height for block element, we would NOT use align-items
+          in the same block element
+        </li>
+        <li>
+          - if we f.e. have font-size in document 16px that we will have
+          <span style="color: red">
+            <b>additional space</b>
+            in inline elements on right side </span
+          >, in inline element
+          <b>&lt;img&gt;</b>
+          this additional space
+          <b>at bottom</b>, by 1/4, so it's 4px.
+          <b
+            >That's why in many projects make for tag &lt;img&gt; display:
+            block</b
+          >
+          like:
+          <pre>
+          <code>
+            img {
+             display: block;
+            }
+          </code>
+        </pre>
+        </li>
+        <li>
+          - Learn <b>how to take out last margin</b> in flex elements
+          <pre>
+            <code>
+    
+            /* Approach 1: */
+            .nav-site .item {
+              margin-right: 40px;
+            }
+            .nav-site .item:last-child {
+              margin-right: 0;
+            }
+
+                      /* Approach 2: */
+                      .nav-site .item:not(:last-child) {
+                        margin-right: 40px;
+                      }
+
+            /* Approach 3: */
+            /* use for all items that have before them element with the same class .item,  
+            in other words for all element in this container except the first*/
+            .nav-site .item + .item {
+              background-color: rgb(227, 255, 226);
+              margin-left: 40px;
+            }
+            </code>
+          </pre>
+        </li>
+        <li>
+          - Element in flex container with auto align, f.e. two element in menu
+          (logo & nav) from left side, but list with buttons (login & register)
+          we should put to right side, so easiest way automatically put this
+          third element to the right side is set for this flex element
+          <b>margin-left: auto</b>, f.e. on
+          <a
+            target="_blank"
+            href="https://torkotiuk.github.io/photo-community/index.html"
+            >Photo Community</a
+          >
+        </li>
+        <li>
+          -
+          <a
+            target="_blank"
+            href="https://www.youtube.com/watch?v=c32Jb9Ejz4k&t=2866s"
+            >block VS inline-block element</a
+          >
+        </li>
+        <li>
+          <a
+            target="_blank"
+            style="font-size: 20px"
+            href="https://www.youtube.com/watch?v=c32Jb9Ejz4k&t=3450s"
+            >A multi-line FLEX container - explanation, how to make grid with
+            flex techniques</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=c32Jb9Ejz4k"
+            ><h2>
+              Модуль 3. Вебинар №6. Flexbox - 1:25:00; Go on with repeating
+              html/css
+            </h2></a
+          >
+        </li>
+      </ul>
     </div>
 
     <!-- end container -->
