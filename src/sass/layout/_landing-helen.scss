@@ -1,0 +1,23 @@
+.enhel-icon::before {
+  // outline: 1px solid black;
+
+  display: inline-block;
+  content: '';
+  width: 35px;
+  height: 35px;
+
+  background-image: url('../images/fire-icon.svg');
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  vertical-align: middle;
+}
+
+// .enhel-icon {
+//   color: green;
+// }
+
+.enhel-title {
+  font-size: 32px;
+}
