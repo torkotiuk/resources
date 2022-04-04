@@ -117,12 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"file-examples/style.css":[function(require,module,exports) {
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"file-examples/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\fonts\\Muli\\Muli-Light.eot":[["..\\Muli-Light.22595b80.eot","fonts/Muli/Muli-Light.eot"],"fonts/Muli/Muli-Light.eot"],"./..\\fonts\\Muli\\Muli-Light.woff2":[["..\\Muli-Light.dd3aa33e.woff2","fonts/Muli/Muli-Light.woff2"],"fonts/Muli/Muli-Light.woff2"],"./..\\fonts\\Muli\\Muli-Light.woff":[["..\\Muli-Light.96705638.woff","fonts/Muli/Muli-Light.woff"],"fonts/Muli/Muli-Light.woff"],"./..\\fonts\\Muli\\Muli-Light.ttf":[["..\\Muli-Light.15b836e3.ttf","fonts/Muli/Muli-Light.ttf"],"fonts/Muli/Muli-Light.ttf"],"./..\\fonts\\Muli\\Muli-Light.svg":[["..\\Muli-Light.b9d5eda3.svg","fonts/Muli/Muli-Light.svg"],"fonts/Muli/Muli-Light.svg"],"./..\\fonts\\Muli\\Muli-Regular.eot":[["..\\Muli-Regular.513849a9.eot","fonts/Muli/Muli-Regular.eot"],"fonts/Muli/Muli-Regular.eot"],"./..\\fonts\\Muli\\Muli-Regular.woff2":[["..\\Muli-Regular.65f6944b.woff2","fonts/Muli/Muli-Regular.woff2"],"fonts/Muli/Muli-Regular.woff2"],"./..\\fonts\\Muli\\Muli-Regular.woff":[["..\\Muli-Regular.c00baaa9.woff","fonts/Muli/Muli-Regular.woff"],"fonts/Muli/Muli-Regular.woff"],"./..\\fonts\\Muli\\Muli-Regular.ttf":[["..\\Muli-Regular.ecfa5d2a.ttf","fonts/Muli/Muli-Regular.ttf"],"fonts/Muli/Muli-Regular.ttf"],"./..\\fonts\\Muli\\Muli-Regular.svg":[["..\\Muli-Regular.3a3221af.svg","fonts/Muli/Muli-Regular.svg"],"fonts/Muli/Muli-Regular.svg"],"./..\\fonts\\Muli\\Muli-Bold.eot":[["..\\Muli-Bold.f0904dd2.eot","fonts/Muli/Muli-Bold.eot"],"fonts/Muli/Muli-Bold.eot"],"./..\\fonts\\Muli\\Muli-Bold.woff2":[["..\\Muli-Bold.a6359dbc.woff2","fonts/Muli/Muli-Bold.woff2"],"fonts/Muli/Muli-Bold.woff2"],"./..\\fonts\\Muli\\Muli-Bold.woff":[["..\\Muli-Bold.0062b291.woff","fonts/Muli/Muli-Bold.woff"],"fonts/Muli/Muli-Bold.woff"],"./..\\fonts\\Muli\\Muli-Bold.ttf":[["..\\Muli-Bold.f370f8b0.ttf","fonts/Muli/Muli-Bold.ttf"],"fonts/Muli/Muli-Bold.ttf"],"./..\\fonts\\Muli\\Muli-Bold.svg":[["..\\Muli-Bold.66b42fe4.svg","fonts/Muli/Muli-Bold.svg"],"fonts/Muli/Muli-Bold.svg"],"./..\\images\\trafalgar-header.svg":[["..\\trafalgar-header.0df63d49.svg","images/trafalgar-header.svg"],"images/trafalgar-header.svg"],"./..\\images\\service1.svg":[["..\\service1.b238bc65.svg","images/service1.svg"],"images/service1.svg"],"./..\\images\\service2.svg":[["..\\service2.009be57e.svg","images/service2.svg"],"images/service2.svg"],"./..\\images\\service3.svg":[["..\\service3.57902047.svg","images/service3.svg"],"images/service3.svg"],"./..\\images\\service4.svg":[["..\\service4.eff96b61.svg","images/service4.svg"],"images/service4.svg"],"./..\\images\\service5.svg":[["..\\service5.eb73082d.svg","images/service5.svg"],"images/service5.svg"],"./..\\images\\service6.svg":[["..\\service6.8f54679b.svg","images/service6.svg"],"images/service6.svg"],"./..\\images\\trafalgar-illustration1.svg":[["..\\trafalgar-illustration1.22710a67.svg","images/trafalgar-illustration1.svg"],"images/trafalgar-illustration1.svg"],"./..\\images\\trafalgar-illustration2.svg":[["..\\trafalgar-illustration2.7b450b7a.svg","images/trafalgar-illustration2.svg"],"images/trafalgar-illustration2.svg"],"./..\\images\\bg-article.svg":[["..\\bg-article.e854fb37.svg","images/bg-article.svg"],"images/bg-article.svg"],"./..\\images\\review\\dots-bg-blue.png":[["..\\dots-bg-blue.2ee9ebdd.png","images/review/dots-bg-blue.png"],"images/review/dots-bg-blue.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -150,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58542" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64662" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
