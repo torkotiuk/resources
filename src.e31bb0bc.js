@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slider.js":[function(require,module,exports) {
+},{"./..\\images\\fire-icon.svg":[["fire-icon.e6260cf7.svg","images/fire-icon.svg"],"images/fire-icon.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/slider.js":[function(require,module,exports) {
 // $('.multiple-items').slick({
 //   infinite: true,
 //   slidesToShow: 3,
@@ -400,7 +400,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53132" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58542" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

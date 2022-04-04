@@ -478,6 +478,22 @@ ul {
   border: 1px solid #8ef82b;
 }
 
+.enhel-icon::before {
+  display: inline-block;
+  content: "";
+  width: 35px;
+  height: 35px;
+  background-image: url("/fire-icon.e6260cf7.svg");
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.enhel-title {
+  font-size: 32px;
+}
+
 .plan-spheres-title__container {
   display: flex;
   align-items: center;
