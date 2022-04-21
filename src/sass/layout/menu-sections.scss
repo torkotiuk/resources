@@ -28,3 +28,17 @@
 .menu-section-link:hover {
   color: #fff;
 }
+
+.enhel-icon-1 {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 15px;
+
+  background-image: url('../images/fire-icon.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  vertical-align: middle;
+}
