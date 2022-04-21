@@ -169,6 +169,18 @@ ul {
   color: #fff;
 }
 
+.enhel-icon-1 {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("/fire-icon.e6260cf7.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
 .header-before {
   position: -webkit-sticky;
   position: sticky;
