@@ -519,4 +519,19 @@ ul {
   background-color: white;
 }
 
+.mountain-climb h2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mountain-climb .site-link {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: 2px solid #4bff57;
+  background-color: teal;
+  color: #fff;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
