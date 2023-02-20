@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":[],"mappings":";;;AAGA,aAHA,QAAA,oBAGA,QAAA","file":"src.e1f55f35.js","sourceRoot":"..\\src","sourcesContent":["import './sass/main.scss';\r\n// import './js/someTask';\r\n// import './js/burger-menu';\r\nimport './123/slider';\r\n"]}

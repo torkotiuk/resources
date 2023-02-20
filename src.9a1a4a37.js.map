@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/someTask.js","index.js"],"names":["b","console","log"],"mappings":";;;AAAA,IAAIA,EAAI,GAENC,QAAQC,IAAIF,GACRA,IAAAA,EAAI;;ACFV,aADA,QAAA,oBACA,QAAA","file":"src.9a1a4a37.js","sourceRoot":"..\\src","sourcesContent":["let b = 20;\r\nif (true) {\r\n  console.log(b);\r\n  let b = 10;\r\n}\r\n","import './sass/main.scss';\r\nimport './js/someTask';\r\n"]}
